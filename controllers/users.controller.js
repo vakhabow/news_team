@@ -1,9 +1,13 @@
 const User = require("../models/User.model");
 
 module.exports.userController = {
+  
   postUser: async (req, res) => {
     try {
-      await User.create(req.body);
+      // const {name} = req.body
+      await User.create({
+        name: req.body.name
+      });
       res.json("user dobavlen");
     } catch (err) {
       res.json(err);
