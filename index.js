@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 
 const app = express();
-
+app.use(require("./routes"));
 const port = 4000;
 
 app.use(cors());
@@ -15,5 +15,5 @@ mongoose
   .catch(() => console.log("Ошибка при соединении с сервером MongoDB"));
 
 app.listen(port, () => {
-  console.log(`hello port http://localhost:${port}`);
+  console.log(`hello port http://localhost:${port}`)
 });
