@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+
 const newsSchema = mongoose.Schema({
   title: String,
   body: String,
