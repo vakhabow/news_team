@@ -16,7 +16,8 @@ module.exports.newsContrl = {
 
     getAllNews: async (req, res) => {
         try {
-            await News.find({})
+            const news = await News.find({})
+            res.json(news)
         } catch (e) {
             res.json({error: e.toString()})
         }
