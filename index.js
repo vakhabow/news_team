@@ -9,10 +9,10 @@ app.use(require("./routes"));
 const port = 4200;
 
 
-mongoose.connect("mongodb+srv://bootcamp:bootcamp@cluster0.qvq9t.mongodb.net/newsS_backs?retryWrites=true&w=majority", {
-}).then(() => console.log('Успешно соединились с сервером MongoDB'))
-.catch(() => console.log('Ошибка при соединении с сервером MongoDB'))
-
+mongoose
+  .connect("mongodb+srv://Isa:28092002@cluster0.fnkei.mongodb.net/news_team")
+  .then(() => console.log("Успешно соединились с сервером MongoDB"))
+  .catch(() => console.log("Ошибка при соединении с сервером MongoDB"));
 
 app.listen(port, () => {
   console.log(`hello port http://localhost:${port}`)
