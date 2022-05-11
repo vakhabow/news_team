@@ -21,5 +21,14 @@ module.exports.newsContrl = {
         } catch (e) {
             res.json({error: e.toString()})
         }
+    },
+    
+    getNewsById: async (req, res) => {
+        try {
+            const newsById = await News.findById(req.params.id)
+            res.json(newsById)
+        }  catch (e) {
+            res.json({error: e.toString()})
+        }
     }
 }
