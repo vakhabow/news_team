@@ -5,4 +5,6 @@ const { userController } = require('../controllers/users.controller');
 const router = Router()
 
 router.post("/user", userController.postUser)
-router.post("/user", userController.getUser)
+router.get("/user", userController.getUser)
+
+module.exports = router;
